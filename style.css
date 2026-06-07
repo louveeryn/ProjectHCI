@@ -1,0 +1,296 @@
+/* CSS untuk halaman Filter & Sort (UC10) */
+/* yang umum (header, footer, tombol) sudah ada di allPagesBhinneka.css */
+
+.shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px 70px;
+}
+
+/* bar atas */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.resultText {
+    font-family: 'EB Garamond', serif;
+    font-size: 19px;
+    color: #333;
+    margin: 0;
+}
+
+.resultText span {
+    font-weight: 700;
+    color: #03005C;
+}
+
+.sortBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sortBox label {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #03005C;
+}
+
+.sortBox .bhSelect {
+    font-size: 17px;
+    padding: 9px 14px;
+}
+
+/* layout 2 kolom */
+.layout {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* ===== filter ===== */
+.filterBox {
+    width: 250px;
+    flex-shrink: 0;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.filterTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #03005C;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.filterTop h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #03005C;
+    margin: 0;
+}
+
+.resetBtn {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    color: #FF5900;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.resetBtn:hover {
+    text-decoration: underline;
+}
+
+.filterPart {
+    margin-bottom: 22px;
+}
+
+.filterPart h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 10px;
+}
+
+.filterPart label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'EB Garamond', serif;
+    font-size: 17px;
+    color: #222;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.filterPart input[type="checkbox"],
+.filterPart input[type="radio"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #FF5900;
+    cursor: pointer;
+}
+
+/* kotak cari merek */
+.merekSearch {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    padding: 8px 10px;
+    border: 1px solid #BBBBBB;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.merekSearch:focus {
+    outline: none;
+    border-color: #03005C;
+}
+
+/* harga */
+.hargaText {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #03005C;
+    background: #F4F0E8;
+    text-align: center;
+    padding: 7px;
+    border-radius: 8px;
+    margin: 0 0 12px;
+}
+
+.kecil {
+    display: block;
+    font-family: 'EB Garamond', serif;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+#sliderHarga {
+    width: 100%;
+    accent-color: #FF5900;
+    cursor: pointer;
+}
+
+/* ===== produk ===== */
+.produkGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+    gap: 18px;
+}
+
+.kartu {
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+}
+
+.kartu:hover {
+    box-shadow: 0 6px 20px rgba(3,0,92,0.15);
+}
+
+/* tempat gambar laptop */
+.kartuGambar {
+    position: relative;
+    height: 170px;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kartuGambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.labelPromo,
+.labelBaru {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    padding: 3px 11px;
+    border-radius: 20px;
+}
+
+.labelPromo { background: #FF5900; }
+.labelBaru { background: #0700C9; }
+
+.kartuIsi {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.kartuMerek {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0700C9;
+    text-transform: uppercase;
+    margin: 0 0 3px;
+}
+
+.kartuNama {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 5px;
+    flex: 1;
+}
+
+.kartuSpek {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    color: #888;
+    margin: 0 0 10px;
+}
+
+.kartuHarga {
+    font-family: 'EB Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #03005C;
+    margin: 0 0 4px;
+}
+
+.kartuRating {
+    font-family: 'EB Garamond', serif;
+    font-size: 14px;
+    color: #FFA500;
+    margin: 0 0 12px;
+}
+
+.cartBtnKartu {
+    width: 100%;
+    background: #0700C9;
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.cartBtnKartu:hover {
+    background: #0500A0;
+}
+
+/* HP */
+@media screen and (max-width: 850px) {
+    .shell { padding: 20px; }
+    .layout { flex-direction: column; }
+    .filterBox { width: 100%; box-sizing: border-box; }
+}
